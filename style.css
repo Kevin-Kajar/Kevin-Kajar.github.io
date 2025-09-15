@@ -1,123 +1,239 @@
-/* Main: */
-div {
-    display: block;
-}
-
-.body {
+body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #644c3d;
+    background-color: #fff;
     overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-/* Menu: */
-.menu {
-    background-color: #333;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    display: flex;
-}
-
-.menu ul {
-    display: flex;
-}
-
-.btn {
-    background-color: #4dbed2;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    background-color: black;
     font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 25px;
 }
 
-.btn:hover {
-    background-color: #45a049;
+ul {
+    list-style: none;
 }
 
-/* Intro Box */
+.menu {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    align-content: center;
+    background: #000;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-radius: 0 0 32px 32px;
+}
+
+    .menu ul {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        margin: 0.5rem 0;
+    }
+
+    .menu .btn {
+        background: none;
+        color: #fff;
+        font-size: 0.6rem;
+        font-weight: 600;
+        padding: 0.4rem 1.0rem;
+        border-radius: 20px;
+        transition: background 0.4s, color 0.4s;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        margin: 0 4px;
+        cursor: pointer;
+    }
+
+        .menu .btn:hover,
+        .menu .btn:focus {
+            background: #39716c;
+            outline: none;
+        }
+
 .introduction_box {
-    height: 100vh;
-    background-color: gray;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    min-height: 100svh;
+    background-color: #fff;
 }
 
-.intro {
-    display: flex;
-}
+    .introduction_box div {
+        display: flex;
+        justify-content: center;
+        gap: 2vw;
+    }
 
-.name {
-    font-size: 1.5em;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin: 0;
-}
+        .introduction_box div img {
+            width: 250px;
+            max-width: 80%;
+            display: block;
+            border-bottom-left-radius: 50%;
+        }
 
-.links {
-    display: block;
-}
+        .introduction_box h1 {
+            font-size: 4rem;
+            color: black;
+            align-self: center;
+            letter-spacing: 0.05em;
+        }
 
 .quick_link {
     display: flex;
+    justify-content: center;
+    gap: 2vw;
+    padding: 0;
+    list-style: none;
 }
+    
+    .quick_link a {
+        display: block;
+    }
+    .quick_link img {
+        width: 40px;
+        max-width: 80%;
+        border-radius: 20px;
+        transition: background 0.4s, color 0.4s;
+        padding: 0.25em;
+        border: 2px solid #39716c;
+    }
+            .quick_link img:hover,
+            .quick_link img:focus {
+                background: #39716c;
+                color: aquamarine;
+                outline: none;
+            }
 
-/* Projects: */
 .projects_box {
     display: block;
-    margin: 1em auto;
-    width: 90%;
+    margin: 1rem auto 0 auto;
+    min-height: 150svh;
+    width: 96%;
     padding: 10px;
     border-radius: 25px;
     background-color: white;
-    margin-bottom: 20px;
 }
 
-.projects_title {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 10px;
-}
+    .projects_box h1 {
+        margin: 1rem 0 2rem 1rem;
+        font-size: 2rem;
+        color: black;
+        letter-spacing: 0.05rem;
+    }
 
-.slideshow {
-    display: flex; 
-    position: relative;
-    max-width: 100%;
-    margin: auto;
-    border-radius: 25px;
-    overflow: hidden;
-}
+    .project {
+        width: 96%;
+    }
 
-project_access {
+        .projects_list h2 {
+            font-size: 1.5rem;
+            letter-spacing: 0.05em;
+            margin: 1rem 0;
+        }
+
+    .slideshow {
+        display: flex;
+    }
+        .slideshow img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            margin-right: 1em;
+        }
+.project_links {
     display: flex;
-    text-align: center;
-    margin-top: 10px;
 }
 
-/* Footer: */
+    .project_links p {
+        font-size: 0.8rem;
+        margin-right: 1rem;
+        color: black;
+    }
+
+    .project_links img {
+        width: 1.5rem;
+        vertical-align: middle;
+        margin-right: 0.5rem;
+    }
+
+    .project_links a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.2em;
+        margin-right: 1em;
+        transition: color 0.4s;
+    }
+        .project_links a:hover,
+        .project_links a:focus {
+            color: #39716c;
+            outline: none;
+        }
+
 .footer {
-    background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: 20px;
 }
 
-.footer_text {
-    margin: 0;
+.footer h1 {
+    font-size: 1.0rem;
+    margin: 1rem 0;
+}
+
+@media (min-width: 1440px) {
+    .menu .btn {
+        font-size: 1rem;
+    }
+    .menu ul {
+        margin: 1rem 0;
+    }
+    .introduction_box div img {
+        width: 350px;
+    }
+    .introduction_box h1 {
+        font-size: 6rem;
+    }
+    .quick_link img {
+        width: 60px;
+    }
+
+    .projects_box h1 {
+        font-size: 3rem;
+    }
+    .projects_list h2 {
+        font-size: 2rem;
+    }
+    .project_links a {
+        font-size: 1.5rem;
+    }
+    .project p {
+        font-size: 1.5rem;
+    }
+    .footer h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px){
+    .menu .btn {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width:768px){
+    .menu {
+        display:none;
+    }
+    .projects_box {
+        width: 90%;
+    }
+}
+
+@media (max-width:520px) {
+    .introduction_box div {
+        flex-direction: column;
+        align-items: center;
+    }
+    .introduction_box h1 {
+        margin: 0;
+    }
 }
